@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ff8a1f">
+<title>Mewkey — Custom Cat &amp; Meme Keychains</title>
+<meta name="description" content="Hand-drawn, slightly unhinged custom keychains of cats, memes and cat memes. Pick your material, size and ring colour, add a name, and clip some chaos to your keys.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐱%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;700&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="body" viewBox="0 0 100 100"><path d="M14 40L20 10L42 26Q50 24 58 26L80 10L86 40Q92 56 82 74Q70 92 50 92Q30 92 18 74Q8 56 14 40Z" fill="currentColor" stroke="#2A1304" stroke-width="4" stroke-linejoin="round"/><path d="M24 22L38 31L26 40ZM76 22L62 31L74 40Z" fill="#FFC48A" opacity=".9"/><path d="M10 62L26 64M10 72L26 68M90 62L74 64M90 72L74 68" stroke="#2A1304" stroke-width="2.5" stroke-linecap="round"/></symbol>
+  <symbol id="f-stare" viewBox="0 0 100 100"><g stroke="#2A1304" stroke-width="3.5" stroke-linecap="round" fill="none"><circle cx="34" cy="50" r="11" fill="#fff"/><circle cx="66" cy="50" r="11" fill="#fff"/><path d="M44 68Q50 74 50 68Q50 74 56 68"/></g><circle cx="35" cy="51" r="3.5" fill="#2A1304"/><circle cx="65" cy="51" r="3.5" fill="#2A1304"/></symbol>
+  <symbol id="f-smug" viewBox="0 0 100 100"><g stroke="#2A1304" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M24 52h20a10 10 0 0 1-20 0z" fill="#2A1304"/><path d="M56 52h20a10 10 0 0 1-20 0z" fill="#2A1304"/><path d="M40 68Q52 78 62 64"/></g></symbol>
+  <symbol id="f-scream" viewBox="0 0 100 100"><g stroke="#2A1304" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M26 42L42 51L26 60"/><path d="M74 42L58 51L74 60"/></g><ellipse cx="50" cy="74" rx="11" ry="12" fill="#2A1304"/><ellipse cx="50" cy="81" rx="7" ry="4" fill="#F25C05"/></symbol>
+  <symbol id="f-sleepy" viewBox="0 0 100 100"><g stroke="#2A1304" stroke-width="3.5" stroke-linecap="round" fill="none"><path d="M26 54Q34 62 42 54"/><path d="M58 54Q66 62 74 54"/><path d="M45 70Q50 74 55 70"/></g></symbol>
+</svg>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">mewkey</a>
+    <nav>
+      <a href="?cat=cat#shop">Cats</a><a href="?cat=meme#shop">Memes</a><a href="?cat=cat-meme#shop">Cat Memes</a><a href="#custom">Make it yours</a>
+      <button id="bagBtn" type="button">Cart <span id="cnt">0</span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div id="home">
+  <section class="wrap hero">
+    <div>
+      <p class="pill">🐾 Custom keychains · Made to order</p>
+      <h1>Clip some chaos to your keys.</h1>
+      <p class="lead">Hand-drawn cats, memes and cats being memes — cut from glossy acrylic, glitter or enamel. Pick a size, pick a ring, add a name. Instant personality for your keys, bags and questionable life choices.</p>
+      <div class="row"><a class="btn" href="#shop">Shop the chaos</a><a class="btn alt" href="#custom">Design your own</a></div>
+      <div class="stats"><div><b>12k+</b>keys de-boring-ified</div><div><b>4.9★</b>average purr rating</div><div><b>3–5 days</b>made &amp; shipped</div></div>
+    </div>
+    <div class="heroArt" id="heroArt" aria-hidden="true"></div>
+  </section>
+  <div class="tape" aria-hidden="true"><div id="tape"></div></div>
+
+  <section class="wrap sec">
+    <h2>Pick your poison</h2><p class="lead">Three flavours of nonsense. All of them adorable.</p>
+    <div class="cats" id="catCards"></div>
+  </section>
+
+  <section class="wrap sec" id="shop">
+    <h2>The keychain zoo</h2><p class="lead">Every design comes in 3 materials, 3 sizes and 4 ring colours.</p>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Search keychains" aria-label="Search keychains">
+      <select id="sort" aria-label="Sort">
+        <option value="feat">Featured</option><option value="new">Newest</option><option value="rate">Top rated</option><option value="lo">Price: low → high</option><option value="hi">Price: high → low</option>
+      </select>
+    </div>
+    <div class="chips" id="chipsCat" role="group" aria-label="Category"></div>
+    <div class="chips" id="chipsPrice" role="group" aria-label="Price"></div>
+    <p id="count" class="count"></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="band" id="custom"><div class="wrap two">
+    <div>
+      <h2>Make it yours</h2>
+      <p class="lead">Every Mewkey is made to order, so customising is built in. Want something that doesn’t exist yet? Your cat, your meme, your weird idea — we’ll draw it.</p>
+      <ol class="steps">
+        <li><b>Pick a character</b>Choose from the zoo — or send us your own cat or favourite meme.</li>
+        <li><b>Choose the vibe</b>Glossy, glitter or enamel. Mini, Classic or Chonky. Four ring colours.</li>
+        <li><b>Make it personal</b>Engrave a name or inside joke on the back for just $3.</li>
+      </ol>
+    </div>
+    <form id="pitch" class="form">
+      <h3>Pitch us your keychain</h3>
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Theme<select name="theme" required><option>My own cat</option><option>A meme I love</option><option>Cat meme mash-up</option><option>Something totally weird</option></select></label>
+      <label>How many?<select name="qty" required><option>1</option><option>2–5</option><option>6–20</option><option>20+ (bulk / events)</option></select></label>
+      <label>Describe the chaos<textarea name="msg" rows="4"></textarea></label>
+      <p class="small">Free concept sketch · No commitment · Reply in 2–3 days</p>
+      <button class="btn" type="submit">Send my idea ✨</button>
+    </form>
+  </div></section>
+</div>
+
+<section id="pdp" class="wrap sec" hidden></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div><b class="logo">mewkey</b><p>Hand-drawn, slightly unhinged keychains of cats, memes and cats being memes. Designed with love, cut with lasers.</p></div>
+  <div><h3>The fine print</h3><ul><li>Free shipping over $35</li><li>Made to order in 3–5 days</li><li>30-day “my cat hates it” returns</li></ul></div>
+  <div><h3>Say meow</h3><p><a href="mailto:hello@mewkey.shop">hello@mewkey.shop</a></p></div>
+</div><p class="copy">© 2026 Mewkey. No cats were harmed. Several were mildly inconvenienced.</p></footer>
+
+<div id="shade"></div>
+<aside id="drawer" aria-label="Your bag">
+  <div class="dh"><h3>Your bag (<span id="dc">0</span>)</h3><button id="close" type="button" aria-label="Close bag">✕</button></div>
+  <p id="free" class="free"></p><div class="meter"><i id="meter"></i></div>
+  <div id="items"></div>
+  <div class="tot"><span>Subtotal</span><b id="sub">$0.00</b></div>
+  <a class="btn" id="checkout" href="#">Check out by email</a>
+</aside>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
